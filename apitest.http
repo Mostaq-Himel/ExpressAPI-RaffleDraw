@@ -1,0 +1,64 @@
+GET http://localhost:4000/health
+
+### 
+
+GET http://localhost:4000/api/v1/tickets/
+
+###
+POST http://localhost:4000/api/v1/tickets/ 
+Content-Type: application/json
+
+{
+    "username": "User1",
+    "price": 5
+}
+
+### 
+// ticket id related routes
+GET http://localhost:4000/api/v1/tickets/t/-GcAx7cQL
+
+###
+PUT  http://localhost:4000/api/v1/tickets/t/-GcAx7cQL
+Content-Type: application/json
+
+{
+    "username": "User3"
+}
+
+###
+DELETE http://localhost:4000/api/v1/tickets/t/ILIiZaGmF
+
+
+###
+
+
+// user related routes
+GET http://localhost:4000/api/v1/tickets/u/User1
+
+
+###
+
+PUT http://localhost:4000/api/v1/tickets/u/User1
+Content-Type: application/json
+
+{
+    "price": 10
+}
+
+###
+
+DELETE  http://localhost:4000/api/v1/tickets/u/User1 
+
+###
+// sell bulk tickets 
+POST http://localhost:4000/api/v1/tickets/bulk
+Content-Type: application/json
+
+{
+    "username": "User1",
+    "price": 5,
+    "count": 6
+}
+
+###
+GET http://localhost:4000/api/v1/tickets/draw?wc=3
